@@ -31,6 +31,46 @@
     body { font-family: 'Helvetica Neue', sans-serif; background-color: #f8f9fa; color: #333; }
     .navbar { background-color: #008b8b; }
     .navbar-brand, .nav-link { color: #fff !important; font-weight: 500; }
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+    }
+
+    .navbar-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .custom-menu-button {
+      background-color: #ffffff !important;
+      border: none !important;
+      border-radius: 8px;
+      width: 52px;
+      height: 44px;
+      padding: 0 !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .custom-hamburger {
+      width: 26px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .custom-hamburger span {
+      display: block;
+      width: 26px;
+      height: 3px;
+      background-color: #008b8b;
+      border-radius: 2px;
+    }
     .hero { background-color: #008b8b; color: #fff; text-align: center; padding: 80px 20px; }
     .contact-section { padding: 60px 20px; max-width: 900px; margin: auto; }
     .contact-section h2 { color: #008b8b; font-weight: 700; text-align: center; margin-bottom: 30px; }
@@ -44,12 +84,26 @@
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Travel Helpr</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="travelhelpr-logo.png" alt="TravelHelpr Logo" class="navbar-logo">
+      <span>TravelHelpr</span>
+    </a>
+
+    <button
+      class="navbar-toggler custom-menu-button"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-label="Toggle navigation"
+    >
+      <span class="custom-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
@@ -99,11 +153,29 @@
   </section>
 
   <!-- Footer -->
-  <footer>
-    <div class="container">
-      <p>© 2025 Travel Helpr | All Rights Reserved</p>
-    </div>
-  </footer>
+<footer>
+  <div class="container">
+    <p class="mb-2">© 2026 TravelHelpr | All Rights Reserved</p>
+
+    <p class="mb-0">
+      <a href="privacy.html" class="text-white text-decoration-none">
+        Privacy Policy
+      </a>
+
+      <span class="mx-2">|</span>
+
+      <a href="terms.html" class="text-white text-decoration-none">
+        Terms of Service
+      </a>
+
+      <span class="mx-2">|</span>
+
+      <a href="contact.html" class="text-white text-decoration-none">
+        Contact
+      </a>
+    </p>
+  </div>
+</footer>
 
   <!-- ✅ JS Confirmation (after successful send) -->
   <script>
